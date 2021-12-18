@@ -14,14 +14,17 @@ int main(void) {
 
 
 //ex3.c
-
+// but take fractional years and leap years into account in your program. 
+// You should specify your birthdate and calculate your age in days.
 #include <stdio.h>
 
 int main(void) {
-    int age = 21, age_conv;
+    float age = 21.67;
+    int age_conv, age_withleap;
 
     age_conv = age * 365;
-    printf("My age in years is %d and converted to days are %d.", age, age_conv);
+    age_withleap = age_conv + (age / 4);
+    printf("My age in exact years is %d and converted to days are %d. My birthdate is 02/02/2000.", age, age_withleap);
     return 0;
 }
 
